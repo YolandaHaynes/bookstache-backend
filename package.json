@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "mariadb": "^3.0.0",
+    "sequelize": "^6.19.0",
+    "serve-index": "^1.9.1"
+  },
+  "name": "bookstache-backend",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YolandaHaynes/bookstache-backend.git"
+  },
+  "author": "Yolanda Haynes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YolandaHaynes/bookstache-backend/issues"
+  },
+  "homepage": "https://github.com/YolandaHaynes/bookstache-backend#readme"
+}
