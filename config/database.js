@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-//Passing parameters separately (other dialects)
+
 module.exports = new Sequelize(process.env.database, process.env.username, process.env.password, {
   host: process.env.host,
   port:process.env.dbport,
