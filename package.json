@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/YolandaHaynes/bookstache-backend/issues"
   },
-  "homepage": "https://github.com/YolandaHaynes/bookstache-backend#readme"
+  "homepage": "https://github.com/YolandaHaynes/bookstache-backend#readme",
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
 }

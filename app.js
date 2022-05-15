@@ -23,6 +23,7 @@ app.use(bodyParser.json())
 app.get('/', (req,res) => res.send('Index'))
 
 app.put('/user', (req, res)=> {
+    // console.log(req.body)
     // res.send('User info')
     User.create({ email:req.body.email, password:req.body.password })
     .then(result=>{
