@@ -2,8 +2,9 @@
 const {
   Model
 } = require('sequelize');
+const Book_list_permission = require('./Book_list_permissions');
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class Users extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,15 +12,23 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Users.hasMany(models.book_list,{
+        foreignKey: 'created_by',
+        onDelete: 'CASCADE'
+      }),
+      Users.hasMany(model.book_list_permission,{
+        foreignKey: 'user_id',
+        onDelete: 'CASCADE'
+      })
     }
   }
-  User.init({
+  Users.init({
     userName: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'Users',
   });
-  return User;
+  return Users;
 };

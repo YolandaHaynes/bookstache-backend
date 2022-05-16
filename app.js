@@ -5,10 +5,10 @@ const path = require('path');
 //Use .env file in config folder
 require("dotenv").config({ path: ".env" })
 
-const User = require('./models/User')
+const User = require('./modelsVersion1/User')
 
 //database
-const db = require('./config/database');
+const db = require('./configVersion1/database');
 
 //Test DB
 db.authenticate()
