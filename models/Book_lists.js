@@ -18,7 +18,11 @@ module.exports = (sequelize, DataTypes) => {
       Book_lists.belongsToMany(models.Book_list_permissions, {
         foreignKey: 'book_list_id',
         onDelete: 'CASCADE'
-      })
+      });
+      Book_lists.belongsToMany(models.Book_list_books, {
+        foreignKey: 'book_list_id',
+        onDelete: 'CASCADE'
+      });
     }
   }
   Book_lists.init({
