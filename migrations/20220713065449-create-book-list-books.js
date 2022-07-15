@@ -16,14 +16,6 @@ module.exports = {
           key: 'id'
         }
       },
-      book_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        // references:{
-        //   model: 'Books',
-        //   key: 'id'
-        // }
-      },
       favorite: {
         type: Sequelize.BOOLEAN
       },

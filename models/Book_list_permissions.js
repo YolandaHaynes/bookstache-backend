@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Book_list_permissions.belongsToMany(models.Users,{
         foreignKey: 'user_id'
-      });
+      }),
       Book_list_permissions.belongsToMany(models.Book_lists,{
         foreignKey: 'book_list_id'
       })
