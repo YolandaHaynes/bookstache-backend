@@ -15,9 +15,9 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'book_list_id'
       });
       //will add another association once model Books is created
-      // Book_list_books.belongsToMany(models.Books,{
-      //   foreignKey: 'book_id'
-      // });
+      Book_list_books.belongsToMany(models.Books,{
+        foreignKey: 'book_id'
+      });
     }
   }
   Book_list_books.init({
