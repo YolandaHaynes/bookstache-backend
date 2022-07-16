@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Book_list_books.belongsToMany(models.Book_lists,{
+      Book_list_books.hasMany(models.Book_lists,{
         foreignKey: 'book_list_id'
       }),
       //will add another association once model Books is created
-      Book_list_books.belongsToMany(models.Books,{
+      Book_list_books.hasMany(models.Books,{
         foreignKey: 'book_id'
       })
     }
