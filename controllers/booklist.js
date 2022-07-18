@@ -10,7 +10,12 @@ const createBooklist = async (req, res) => {
     return res.status(500).json({error: error.message})
   }
 }
+const addBook = async (req, res) => {
+  res.send(req.params.bookListId)
+}
+
 
 module.exports = {
   createBooklist,
+  addBook,
 }
