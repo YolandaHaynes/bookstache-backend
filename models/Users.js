@@ -12,14 +12,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Users.hasMany(models.Book_list,{
-        foreignKey: 'created_by',
-        onDelete: 'CASCADE'
-      }),
-      Users.hasMany(models.Book_list_permission,{
-        foreignKey: 'user_id',
-        onDelete: 'CASCADE'
-      })
+      // Users.hasMany(models.Book_list,{
+      //   foreignKey: 'created_by',
+      //   onDelete: 'CASCADE'
+      // }),
+      // Users.hasMany(models.Book_list_permission,{
+      //   foreignKey: 'user_id',
+      //   onDelete: 'CASCADE'
+      // })
     }
   }
   Users.init({

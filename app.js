@@ -1,14 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const routes = require ('./routes')
+
 
 //Use .env file in config folder
 require("dotenv").config({ path: ".env" })
 
-const User = require('./modelsVersion1/User')
+const User = require('./models/Users')
 
-//database
-const db = require('./configVersion1/database');
+//database connection
+const db = require('./config/database');
 
 //Test DB
 db.authenticate()
@@ -20,18 +22,19 @@ const app = express();
 app.use(bodyParser.json())
 
 //Routes
-app.get('/', (req,res) => res.send('Index'))
+app.use('/api', routes)
+// app.get('/', (req,res) => res.send('Index Page'))
 
-app.put('/user', (req, res)=> {
-    // console.log(req.body)
-    // res.send('User info')
-    User.create({ email:req.body.email, password:req.body.password })
-    .then(result=>{
-        console.log("New user's auto-generated ID:", result.id);
-        res.send(result)
-    })
-    .catch(err => res.send(500, err.original.text))
-})
+// app.put('/user', (req, res)=> {
+//     // console.log(req.body)
+//     // res.send('User info')
+//     User.create({ email:req.body.email, password:req.body.password })
+//     .then(result=>{
+//         console.log("New user's auto-generated ID:", result.id);
+//         res.send(result)
+//     })
+//     .catch(err => res.send(500, err.original.text))
+// })
 
 const PORT = process.env.PORT || 8000;
 
