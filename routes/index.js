@@ -12,5 +12,6 @@ router.post('/user', users.createUser);
 router.get('/searchByIsbn',books.searchByIsbn)
 router.get('/searchByTitle', books.searchByTitle)
 router.put('/booklist/:bookListId/addBook', booklist.addBook)
+router.get('/booklist/:bookListId', booklist.getBookList)
 
 module.exports = router;

@@ -1,6 +1,4 @@
 'use strict';
-// const Users = require('../models/user');
-// const book_list = require('../models/book_list');
 
 module.exports = {
   async up(queryInterface, Sequelize) {
