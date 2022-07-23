@@ -12,10 +12,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       isbn10: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING(13)
       },
       isbn13: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING(17)
       },
       description: {
         type: Sequelize.STRING
@@ -25,11 +25,11 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: 'TIMESTAMP'
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: 'TIMESTAMP'
       }
     });
   },
