@@ -11,12 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Book_authors.hasMany(models.Books,{
-        foreignKey: 'book_id'
-      }),
-      Book_authors.hasMany(models.Authors,{
-        foreignKey: 'author_id'
-      })
+      // Book_authors.hasMany(models.Books,{
+      //   foreignKey: 'book_id'
+      // }),
+      // Book_authors.hasMany(models.Authors,{
+      //   foreignKey: 'author_id'
+      // })
     }
   }
   Book_authors.init({
