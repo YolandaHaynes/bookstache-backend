@@ -11,11 +11,11 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-      await queryInterface.bulkInsert('Book_lists', [{
-        name: 'Trains',
-        public: true,
-        created_by: 1,
-      }], {});
+    await queryInterface.bulkInsert('Book_lists', [{
+      name: "Yoyo's Favorite Books",
+      public: true,
+      created_by: 1,
+    }], {});
   },
 
   async down (queryInterface, Sequelize) {
